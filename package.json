@@ -1,0 +1,27 @@
+{
+  "name": "swiggy-clone",
+  "version": "1.0.0",
+  "description": "This is Swiggy[dot].com clone learned in Namaste React Live",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kartik1918/swiggy-clone.git"
+  },
+  "author": "Kartik Gupta",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/kartik1918/swiggy-clone/issues"
+  },
+  "homepage": "https://github.com/kartik1918/swiggy-clone#readme",
+  "devDependencies": {
+    "parcel": "^2.8.3",
+    "process": "^0.11.10"
+  },
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  }
+}
