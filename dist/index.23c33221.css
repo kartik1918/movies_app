@@ -12,6 +12,39 @@
   color: #00f;
 }
 
+.movie-list-container {
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+  margin: 24px;
+  display: flex;
+}
+
+.shimmer-card {
+  background-color: gray;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+  margin: 24px;
+  display: flex;
+}
+
+img {
+  width: 100%;
+}
+
+.movie-card {
+  width: 400px;
+  height: 400px;
+  object-fit: contain;
+}
+
+div > h3 {
+  text-align: center;
+}
+
 html, body {
   box-sizing: border-box;
   margin: 0;

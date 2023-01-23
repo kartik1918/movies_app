@@ -27305,23 +27305,42 @@ parcelHelpers.defineInteropFlag(exports);
 var _jsxDevRuntime = require("react/jsx-dev-runtime");
 var _react = require("react");
 var _reactDefault = parcelHelpers.interopDefault(_react);
+var _bannerJs = require("./components/Banner.js");
+var _bannerJsDefault = parcelHelpers.interopDefault(_bannerJs);
 var _navbarJs = require("./components/Navbar.js");
 var _navbarJsDefault = parcelHelpers.interopDefault(_navbarJs);
 var _s = $RefreshSig$();
 const App = ()=>{
     _s();
     const [moviesData, setMoviesData] = (0, _react.useState)([]);
-    const fetchMovies = async ()=>{};
-    (0, _react.useEffect)(()=>{});
+    const fetchMovies = async ()=>{
+        const response = await fetch(`
+    https://api.themoviedb.org/3/trending/all/day?api_key=6a2290aac1acc1d3c63e4a0db41012a4`);
+        const data = await response.json();
+        console.log(data);
+        setMoviesData(data.results);
+    };
+    (0, _react.useEffect)(()=>{
+        fetchMovies();
+    }, []);
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _navbarJsDefault.default), {}, void 0, false, {
-            fileName: "src/App.js",
-            lineNumber: 18,
-            columnNumber: 7
-        }, undefined)
-    }, void 0, false, {
+        children: [
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _navbarJsDefault.default), {}, void 0, false, {
+                fileName: "src/App.js",
+                lineNumber: 24,
+                columnNumber: 7
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _bannerJsDefault.default), {
+                trendingMovies: moviesData
+            }, void 0, false, {
+                fileName: "src/App.js",
+                lineNumber: 25,
+                columnNumber: 7
+            }, undefined)
+        ]
+    }, void 0, true, {
         fileName: "src/App.js",
-        lineNumber: 17,
+        lineNumber: 23,
         columnNumber: 5
     }, undefined);
 };
@@ -27336,7 +27355,7 @@ $RefreshReg$(_c, "App");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","./components/Navbar.js":"5EEXV"}],"5EEXV":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","./components/Navbar.js":"5EEXV","./components/Banner.js":"eQaZO"}],"5EEXV":[function(require,module,exports) {
 var $parcel$ReactRefreshHelpers$8fbf = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
@@ -27386,6 +27405,136 @@ $RefreshReg$(_c, "Navbar");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","./Navbar.css":"btXQ4"}],"btXQ4":[function() {},{}],"giGSC":[function() {},{}]},["1xC6H","8BXtR","bB7Pu"], "bB7Pu", "parcelRequirece0d")
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","./Navbar.css":"btXQ4"}],"btXQ4":[function() {},{}],"eQaZO":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$bb88 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$bb88.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _bannerCss = require("./Banner.css");
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+var _shimmerJs = require("./Shimmer.js");
+var _shimmerJsDefault = parcelHelpers.interopDefault(_shimmerJs);
+const Banner = ({ trendingMovies  })=>{
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+        children: [
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h3", {
+                children: "Trending Movies"
+            }, void 0, false, {
+                fileName: "src/components/Banner.js",
+                lineNumber: 8,
+                columnNumber: 7
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: "movie-list-container",
+                children: !trendingMovies ? /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _shimmerJsDefault.default), {}, void 0, false, {
+                    fileName: "src/components/Banner.js",
+                    lineNumber: 11,
+                    columnNumber: 11
+                }, undefined) : trendingMovies?.map((trendingMovie, index)=>{
+                    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                        className: "movie-card",
+                        children: [
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
+                                src: `https://image.tmdb.org/t/p/w500${trendingMovie.backdrop_path}`,
+                                alt: trendingMovie.name
+                            }, void 0, false, {
+                                fileName: "src/components/Banner.js",
+                                lineNumber: 16,
+                                columnNumber: 17
+                            }, undefined),
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h3", {
+                                children: trendingMovie.name ? trendingMovie.name : trendingMovie.title
+                            }, void 0, false, {
+                                fileName: "src/components/Banner.js",
+                                lineNumber: 20,
+                                columnNumber: 17
+                            }, undefined),
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+                                children: [
+                                    "Popularity: ",
+                                    trendingMovie.popularity
+                                ]
+                            }, void 0, true, {
+                                fileName: "src/components/Banner.js",
+                                lineNumber: 25,
+                                columnNumber: 17
+                            }, undefined)
+                        ]
+                    }, trendingMovie.id, true, {
+                        fileName: "src/components/Banner.js",
+                        lineNumber: 15,
+                        columnNumber: 15
+                    }, undefined);
+                })
+            }, void 0, false, {
+                fileName: "src/components/Banner.js",
+                lineNumber: 9,
+                columnNumber: 7
+            }, undefined)
+        ]
+    }, void 0, true, {
+        fileName: "src/components/Banner.js",
+        lineNumber: 7,
+        columnNumber: 5
+    }, undefined);
+};
+_c = Banner;
+exports.default = Banner;
+var _c;
+$RefreshReg$(_c, "Banner");
+
+  $parcel$ReactRefreshHelpers$bb88.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","./Banner.css":"6qy17","./Shimmer.js":"g6ZGj"}],"6qy17":[function() {},{}],"g6ZGj":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$0b04 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$0b04.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _bannerCss = require("./Banner.css");
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+const Shimmer = ()=>{
+    console.log("running shimmer");
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+        children: Array(10).fill("").map((item, index)=>{
+            return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: "shimmer-card"
+            }, void 0, false, {
+                fileName: "src/components/Shimmer.js",
+                lineNumber: 11,
+                columnNumber: 17
+            }, undefined);
+        })
+    }, void 0, false, {
+        fileName: "src/components/Shimmer.js",
+        lineNumber: 8,
+        columnNumber: 5
+    }, undefined);
+};
+_c = Shimmer;
+exports.default = Shimmer;
+var _c;
+$RefreshReg$(_c, "Shimmer");
+
+  $parcel$ReactRefreshHelpers$0b04.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"iTorj","./Banner.css":"6qy17","react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"6qy17":[function() {},{}],"giGSC":[function() {},{}]},["1xC6H","8BXtR","bB7Pu"], "bB7Pu", "parcelRequirece0d")
 
 //# sourceMappingURL=index.3d214d75.js.map

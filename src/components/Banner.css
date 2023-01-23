@@ -1,0 +1,32 @@
+.movie-list-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    margin: 24px; 
+    flex-wrap: wrap;
+}
+
+.shimmer-card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    margin: 24px; 
+    flex-wrap: wrap;
+    background-color: grey;
+}
+
+img {
+    width: 100%
+}
+
+.movie-card {
+    width: 400px;
+    height: 400px;
+    object-fit: contain;
+}
+
+div > h3 {
+    text-align: center;
+}
