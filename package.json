@@ -4,7 +4,9 @@
   "description": "This is Swiggy[dot].com clone learned in Namaste React Live",
   "main": "index.js",
   "scripts": {
-    "test": "jest"
+    "test": "jest",
+    "start": "parcel public/index.html",
+    "build": "parcel build public/index.html" 
   },
   "repository": {
     "type": "git",

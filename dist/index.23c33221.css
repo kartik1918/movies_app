@@ -1,0 +1,21 @@
+.nav-container {
+  height: 48px;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 48px;
+  padding: 12px 8px;
+  display: flex;
+  box-shadow: 0 1px 3px #0000001a, 0 1px 2px #0000000f;
+}
+
+.nav-items {
+  color: #00f;
+}
+
+html, body {
+  box-sizing: border-box;
+  margin: 0;
+  font-family: Nunito Sans, sans-serif;
+}
+
+/*# sourceMappingURL=index.23c33221.css.map */

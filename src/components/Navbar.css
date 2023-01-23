@@ -1,0 +1,13 @@
+.nav-container {
+    padding: 12px 8px;
+    height: 48px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 48px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;;
+}
+
+.nav-items {
+    color: blue
+}
