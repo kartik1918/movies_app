@@ -7,6 +7,10 @@
     flex-wrap: wrap;
 }
 
+.banner-head {
+    color: blue
+}
+
 .shimmer-card {
     display: flex;
     justify-content: center;
@@ -24,8 +28,24 @@ img {
 .movie-card {
     width: 400px;
     height: 400px;
+    margin: 0 auto;
     object-fit: contain;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
 }
+
+.movie-overview {
+    padding: 12px;
+    text-align: center;
+    font-size: 12px;
+}
+
+/* .movie-image {
+    margin-bottom: 40px;
+} */
 
 div > h3 {
     text-align: center;

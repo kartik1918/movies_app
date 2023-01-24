@@ -1,8 +1,8 @@
 4341
 51/home/kartik/Desktop/swiggy-clone/package-lock.json1674393772516164594 0
-56/home/kartik/Desktop/swiggy-clone/dist/index.3d214d75.js1674485237411275954 0
-49/home/kartik/Desktop/swiggy-clone/dist/index.html1674485172415507377 0
-38/home/kartik/Desktop/swiggy-clone/dist1674485237427275903 1
+56/home/kartik/Desktop/swiggy-clone/dist/index.3d214d75.js1674485332399009092 0
+49/home/kartik/Desktop/swiggy-clone/dist/index.html1674485332399009092 0
+38/home/kartik/Desktop/swiggy-clone/dist1674485332407009073 1
 69/home/kartik/Desktop/swiggy-clone/node_modules/term-size/package.json1674393046595151220 0
 79/home/kartik/Desktop/swiggy-clone/node_modules/term-size/vendor/macos/term-size499162500000000000 0
 73/home/kartik/Desktop/swiggy-clone/node_modules/term-size/vendor/.DS_Store499162500000000000 0
@@ -1441,7 +1441,7 @@
 64/home/kartik/Desktop/swiggy-clone/node_modules/svgo/package.json1674393046595151220 0
 76/home/kartik/Desktop/swiggy-clone/node_modules/terser/lib/compress/common.js499162500000000000 0
 91/home/kartik/Desktop/swiggy-clone/node_modules/node-gyp-build-optional-packages/optional.js499162500000000000 0
-60/home/kartik/Desktop/swiggy-clone/dist/index.3d214d75.js.map1674485237423275915 0
+60/home/kartik/Desktop/swiggy-clone/dist/index.3d214d75.js.map1674485332407009073 0
 78/home/kartik/Desktop/swiggy-clone/node_modules/caniuse-lite/data/regions/AW.js499162500000000000 0
 80/home/kartik/Desktop/swiggy-clone/node_modules/@parcel/packager-css/package.json1674393046511162201 0
 88/home/kartik/Desktop/swiggy-clone/node_modules/node-gyp-build-optional-packages/index.js499162500000000000 0
@@ -1520,7 +1520,7 @@
 93/home/kartik/Desktop/swiggy-clone/node_modules/caniuse-lite/data/features/css-motion-paths.js499162500000000000 0
 64/home/kartik/Desktop/swiggy-clone/node_modules/globals/readme.md499162500000000000 0
 70/home/kartik/Desktop/swiggy-clone/node_modules/terser/lib/sourcemap.js499162500000000000 0
-57/home/kartik/Desktop/swiggy-clone/dist/index.23c33221.css1674485172415507377 0
+57/home/kartik/Desktop/swiggy-clone/dist/index.23c33221.css1674485332399009092 0
 65/home/kartik/Desktop/swiggy-clone/node_modules/globals/index.d.ts499162500000000000 0
 78/home/kartik/Desktop/swiggy-clone/node_modules/@parcel/core/lib/projectPath.js499162500000000000 0
 54/home/kartik/Desktop/swiggy-clone/node_modules/globals1674393046599150698 1
@@ -2222,7 +2222,7 @@
 101/home/kartik/Desktop/swiggy-clone/node_modules/@parcel/core/test/fixtures/targets-default-distdir-two1674393045147342734 1
 82/home/kartik/Desktop/swiggy-clone/node_modules/domelementtype/lib/esm/package.json499162500000000000 0
 70/home/kartik/Desktop/swiggy-clone/node_modules/micromatch/package.json1674393046595151220 0
-33/home/kartik/Desktop/swiggy-clone1674482155174958436 1
+33/home/kartik/Desktop/swiggy-clone1674485332371009160 1
 73/home/kartik/Desktop/swiggy-clone/node_modules/msgpackr/dist/node.cjs.map499162500000000000 0
 110/home/kartik/Desktop/swiggy-clone/node_modules/@parcel/workers/test/integration/workerfarm/shared-reference.js499162500000000000 0
 61/home/kartik/Desktop/swiggy-clone/node_modules/@parcel/fs/src1674393044259463086 1
@@ -4250,7 +4250,7 @@
 81/home/kartik/Desktop/swiggy-clone/node_modules/@parcel/core/lib/ReporterRunner.js499162500000000000 0
 136/home/kartik/Desktop/swiggy-clone/node_modules/@parcel/node-resolver-core/test/fixture/node_modules/side-effects-false-glob/package.json499162500000000000 0
 129/home/kartik/Desktop/swiggy-clone/node_modules/@parcel/node-resolver-core/test/fixture/node_modules/side-effects-false-glob/sub/a1674393044839384233 1
-61/home/kartik/Desktop/swiggy-clone/dist/index.23c33221.css.map1674485172415507377 0
+61/home/kartik/Desktop/swiggy-clone/dist/index.23c33221.css.map1674485332407009073 0
 73/home/kartik/Desktop/swiggy-clone/node_modules/@parcel/utils/lib/index.js499162500000000000 0
 129/home/kartik/Desktop/swiggy-clone/node_modules/@parcel/node-resolver-core/test/fixture/node_modules/side-effects-false-glob/sub/b1674393044863380970 1
 138/home/kartik/Desktop/swiggy-clone/node_modules/@parcel/node-resolver-core/test/fixture/node_modules/side-effects-false-glob/sub/b/index.js499162500000000000 0

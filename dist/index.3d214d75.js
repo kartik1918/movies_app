@@ -27424,6 +27424,7 @@ const Banner = ({ trendingMovies  })=>{
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
         children: [
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h3", {
+                className: "banner-head",
                 children: "Trending Movies"
             }, void 0, false, {
                 fileName: "src/components/Banner.js",
@@ -27442,7 +27443,8 @@ const Banner = ({ trendingMovies  })=>{
                         children: [
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
                                 src: `https://image.tmdb.org/t/p/w500${trendingMovie.backdrop_path}`,
-                                alt: trendingMovie.name
+                                alt: trendingMovie.name,
+                                className: "movie-image"
                             }, void 0, false, {
                                 fileName: "src/components/Banner.js",
                                 lineNumber: 16,
@@ -27452,7 +27454,7 @@ const Banner = ({ trendingMovies  })=>{
                                 children: trendingMovie.name ? trendingMovie.name : trendingMovie.title
                             }, void 0, false, {
                                 fileName: "src/components/Banner.js",
-                                lineNumber: 20,
+                                lineNumber: 21,
                                 columnNumber: 17
                             }, undefined),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
@@ -27462,7 +27464,7 @@ const Banner = ({ trendingMovies  })=>{
                                 ]
                             }, void 0, true, {
                                 fileName: "src/components/Banner.js",
-                                lineNumber: 25,
+                                lineNumber: 27,
                                 columnNumber: 17
                             }, undefined)
                         ]
