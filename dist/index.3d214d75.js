@@ -143,8 +143,8 @@
     }
   }
 })({"1xC6H":[function(require,module,exports) {
-var Refresh = require("53d5f82667065e8f");
-var ErrorOverlay = require("6c46b4eebcc691e7");
+var Refresh = require("bac813b92f873e28");
+var ErrorOverlay = require("3ddb11fe3f5c6414");
 Refresh.injectIntoGlobalHook(window);
 window.$RefreshReg$ = function() {};
 window.$RefreshSig$ = function() {
@@ -163,7 +163,7 @@ window.addEventListener("parcelhmraccept", ()=>{
     ErrorOverlay.dismissRuntimeErrors();
 });
 
-},{"53d5f82667065e8f":"786KC","6c46b4eebcc691e7":"1dldy"}],"786KC":[function(require,module,exports) {
+},{"bac813b92f873e28":"786KC","3ddb11fe3f5c6414":"1dldy"}],"786KC":[function(require,module,exports) {
 "use strict";
 module.exports = require("11eeeabc5ff4a0cf");
 
@@ -27420,7 +27420,27 @@ var _react = require("react");
 var _reactDefault = parcelHelpers.interopDefault(_react);
 var _shimmerJs = require("./Shimmer.js");
 var _shimmerJsDefault = parcelHelpers.interopDefault(_shimmerJs);
+var _s = $RefreshSig$();
 const Banner = ({ trendingMovies  })=>{
+    _s();
+    const [isFavourite, setIsFavourite] = (0, _react.useState)({
+        status: false,
+        id: ""
+    });
+    const [favourites, setFavourites] = (0, _react.useState)([]);
+    const handleIsFavourite = (movieId, favMovie)=>{
+        setIsFavourite((prevValue)=>{
+            return {
+                ...prevValue,
+                status: true,
+                id: movieId
+            };
+        });
+        setFavourites((prevFav)=>[
+                ...prevFav,
+                favMovie
+            ]);
+    };
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
         children: [
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h3", {
@@ -27428,14 +27448,14 @@ const Banner = ({ trendingMovies  })=>{
                 children: "Trending Movies"
             }, void 0, false, {
                 fileName: "src/components/Banner.js",
-                lineNumber: 8,
+                lineNumber: 25,
                 columnNumber: 7
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                 className: "movie-list-container",
                 children: !trendingMovies ? /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _shimmerJsDefault.default), {}, void 0, false, {
                     fileName: "src/components/Banner.js",
-                    lineNumber: 11,
+                    lineNumber: 28,
                     columnNumber: 11
                 }, undefined) : trendingMovies?.map((trendingMovie, index)=>{
                     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -27447,45 +27467,60 @@ const Banner = ({ trendingMovies  })=>{
                                 className: "movie-image"
                             }, void 0, false, {
                                 fileName: "src/components/Banner.js",
-                                lineNumber: 16,
+                                lineNumber: 33,
                                 columnNumber: 17
                             }, undefined),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h3", {
                                 children: trendingMovie.name ? trendingMovie.name : trendingMovie.title
                             }, void 0, false, {
                                 fileName: "src/components/Banner.js",
-                                lineNumber: 21,
+                                lineNumber: 38,
                                 columnNumber: 17
                             }, undefined),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
                                 children: [
                                     "Popularity: ",
-                                    trendingMovie.popularity
+                                    Math.ceil(trendingMovie.popularity)
                                 ]
                             }, void 0, true, {
                                 fileName: "src/components/Banner.js",
-                                lineNumber: 27,
+                                lineNumber: 44,
                                 columnNumber: 17
+                            }, undefined),
+                            isFavourite.status && isFavourite.id === trendingMovie.id ? /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
+                                children: "Added to Favourite"
+                            }, void 0, false, {
+                                fileName: "src/components/Banner.js",
+                                lineNumber: 46,
+                                columnNumber: 19
+                            }, undefined) : /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
+                                onClick: ()=>handleIsFavourite(trendingMovie.id, trendingMovie),
+                                children: "Add to Favourite"
+                            }, void 0, false, {
+                                fileName: "src/components/Banner.js",
+                                lineNumber: 48,
+                                columnNumber: 19
                             }, undefined)
                         ]
                     }, trendingMovie.id, true, {
                         fileName: "src/components/Banner.js",
-                        lineNumber: 15,
+                        lineNumber: 32,
                         columnNumber: 15
                     }, undefined);
                 })
             }, void 0, false, {
                 fileName: "src/components/Banner.js",
-                lineNumber: 9,
+                lineNumber: 26,
                 columnNumber: 7
             }, undefined)
         ]
     }, void 0, true, {
         fileName: "src/components/Banner.js",
-        lineNumber: 7,
+        lineNumber: 24,
         columnNumber: 5
     }, undefined);
 };
+_s(Banner, "m1OpIAms6NyhfBgNS//U4hhQTfg=");
 _c = Banner;
 exports.default = Banner;
 var _c;
