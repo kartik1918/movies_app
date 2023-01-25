@@ -1,46 +1,66 @@
 .movie-list-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 50px;
-    margin: 24px; 
-    flex-wrap: wrap;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+  margin: 24px;
+  flex-wrap: wrap;
 }
 
 .banner-head {
-    color: blue
+  color: blue;
 }
 
 .shimmer-card {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 50px;
-    margin: 24px; 
-    flex-wrap: wrap;
-    background-color: grey;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+  margin: 24px;
+  flex-wrap: wrap;
+  background-color: grey;
 }
 
 img {
-    width: 100%
+  width: 100%;
 }
 
-.movie-card {
-    width: 400px;
-    height: 400px;
-    margin: 0 auto;
-    object-fit: contain;
+.pagination {
     display: flex;
-    flex-direction: column;
     justify-content: center;
-    align-items: center;
-    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+    margin-top: 40px;
+}
+
+.pagination a {
+  color: black;
+  float: left;
+  padding: 8px 16px;
+  text-decoration: none;
+}
+
+.pagination a.active {
+  background-color: teal;
+  color: white;
+}
+
+.pagination a:hover:not(.active) {background-color: #ddd;}
+
+.movie-card {
+  width: 400px;
+  height: 400px;
+  margin: 0 auto;
+  object-fit: contain;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
 }
 
 .movie-overview {
-    padding: 12px;
-    text-align: center;
-    font-size: 12px;
+  padding: 12px;
+  text-align: center;
+  font-size: 12px;
 }
 
 /* .movie-image {
@@ -48,14 +68,14 @@ img {
 } */
 
 button {
-    color: white;
-    background-color: teal;
-    padding: 6px 14px;
-    border-radius: 5px;
-    border: none;
-    cursor: pointer;
+  color: white;
+  background-color: teal;
+  padding: 6px 14px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
 }
 
 div > h3 {
-    text-align: center;
+  text-align: center;
 }

@@ -2,12 +2,11 @@ import "./Banner.css";
 import React, { useEffect, useState } from "react";
 import Shimmer from "./Shimmer.js";
 
-const Banner = ({ trendingMovies }) => {
+const Banner = ({ trendingMovies, setPage, page }) => {
   const [isFavourite, setIsFavourite] = useState({
     status: false,
     id: "",
   });
-  const [favourites, setFavourites] = useState([])
 
   const handleIsFavourite = (movieId, favMovie) => {
     setIsFavourite((prevValue) => {
@@ -17,8 +16,15 @@ const Banner = ({ trendingMovies }) => {
         id: movieId,
       };
     });
-    setFavourites(prevFav => [...prevFav, favMovie])
   };
+
+  /* Displaying all pages instead of one page like << 1 2 3 >> */
+
+  // const addPages = () => {
+  //   setPagesArr(prevPage => [...prevPage, page])
+  // }
+
+  /************************************************************/
 
   return (
     <div>
@@ -27,7 +33,7 @@ const Banner = ({ trendingMovies }) => {
         {!trendingMovies ? (
           <Shimmer />
         ) : (
-          trendingMovies?.map((trendingMovie, index) => {
+          trendingMovies.results?.map((trendingMovie, index) => {
             return (
               <div key={trendingMovie.id} className="movie-card">
                 <img
@@ -45,7 +51,11 @@ const Banner = ({ trendingMovies }) => {
                 {isFavourite.status && isFavourite.id === trendingMovie.id ? (
                   <button>Added to Favourite</button>
                 ) : (
-                  <button onClick={() => handleIsFavourite(trendingMovie.id, trendingMovie)}>
+                  <button
+                    onClick={() =>
+                      handleIsFavourite(trendingMovie.id, trendingMovie)
+                    }
+                  >
                     Add to Favourite
                   </button>
                 )}
@@ -53,6 +63,11 @@ const Banner = ({ trendingMovies }) => {
             );
           })
         )}
+      </div>
+      <div className="pagination">
+        <button onClick={() => setPage(page => page-1)}>&laquo;</button>
+        <a href="#">{trendingMovies.page}</a>
+        <button onClick={() => setPage(page => page+1)}>&raquo;</button>
       </div>
     </div>
   );
