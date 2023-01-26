@@ -7,6 +7,7 @@ const Banner = ({ trendingMovies, setPage, page }) => {
     status: false,
     id: "",
   });
+  const [pagesArr, setPagesArr] = useState([page])
 
   const handleIsFavourite = (movieId, favMovie) => {
     setIsFavourite((prevValue) => {
@@ -25,6 +26,14 @@ const Banner = ({ trendingMovies, setPage, page }) => {
   // }
 
   /************************************************************/
+
+  const addPages = () => {
+    setPagesArr(prevPages => [...prevPages, page+1])
+  }
+
+  useEffect(() => {
+    console.log("pagesArr--------->", pagesArr);
+  }, [page])
 
   return (
     <div>
@@ -66,8 +75,13 @@ const Banner = ({ trendingMovies, setPage, page }) => {
       </div>
       <div className="pagination">
         <button onClick={() => setPage(page => page-1)}>&laquo;</button>
-        <a href="#">{trendingMovies.page}</a>
-        <button onClick={() => setPage(page => page+1)}>&raquo;</button>
+        <>{pagesArr?.map((page, index) => {
+          return <a href="#" key={index}>{page}</a>
+        })}</>
+        <button onClick={() => {
+          addPages()
+          setPage(page => page+1)
+        }}>&raquo;</button>
       </div>
     </div>
   );

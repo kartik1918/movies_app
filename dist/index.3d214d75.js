@@ -27226,6 +27226,9 @@ const Banner = ({ trendingMovies , setPage , page  })=>{
         status: false,
         id: ""
     });
+    const [pagesArr, setPagesArr] = (0, _react.useState)([
+        page
+    ]);
     const handleIsFavourite = (movieId, favMovie)=>{
         setIsFavourite((prevValue)=>{
             return {
@@ -27238,21 +27241,32 @@ const Banner = ({ trendingMovies , setPage , page  })=>{
     /* Displaying all pages instead of one page like << 1 2 3 >> */ // const addPages = () => {
     //   setPagesArr(prevPage => [...prevPage, page])
     // }
-    /************************************************************/ return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+    /************************************************************/ const addPages = ()=>{
+        setPagesArr((prevPages)=>[
+                ...prevPages,
+                page + 1
+            ]);
+    };
+    (0, _react.useEffect)(()=>{
+        console.log("pagesArr--------->", pagesArr);
+    }, [
+        page
+    ]);
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
         children: [
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h3", {
                 className: "banner-head",
                 children: "Trending Movies"
             }, void 0, false, {
                 fileName: "src/components/Banner.js",
-                lineNumber: 31,
+                lineNumber: 40,
                 columnNumber: 7
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                 className: "movie-list-container",
                 children: !trendingMovies ? /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _shimmerJsDefault.default), {}, void 0, false, {
                     fileName: "src/components/Banner.js",
-                    lineNumber: 34,
+                    lineNumber: 43,
                     columnNumber: 11
                 }, undefined) : trendingMovies.results?.map((trendingMovie, index)=>{
                     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -27264,14 +27278,14 @@ const Banner = ({ trendingMovies , setPage , page  })=>{
                                 className: "movie-image"
                             }, void 0, false, {
                                 fileName: "src/components/Banner.js",
-                                lineNumber: 39,
+                                lineNumber: 48,
                                 columnNumber: 17
                             }, undefined),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h3", {
                                 children: trendingMovie.name ? trendingMovie.name : trendingMovie.title
                             }, void 0, false, {
                                 fileName: "src/components/Banner.js",
-                                lineNumber: 44,
+                                lineNumber: 53,
                                 columnNumber: 17
                             }, undefined),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
@@ -27281,33 +27295,33 @@ const Banner = ({ trendingMovies , setPage , page  })=>{
                                 ]
                             }, void 0, true, {
                                 fileName: "src/components/Banner.js",
-                                lineNumber: 50,
+                                lineNumber: 59,
                                 columnNumber: 17
                             }, undefined),
                             isFavourite.status && isFavourite.id === trendingMovie.id ? /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
                                 children: "Added to Favourite"
                             }, void 0, false, {
                                 fileName: "src/components/Banner.js",
-                                lineNumber: 52,
+                                lineNumber: 61,
                                 columnNumber: 19
                             }, undefined) : /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
                                 onClick: ()=>handleIsFavourite(trendingMovie.id, trendingMovie),
                                 children: "Add to Favourite"
                             }, void 0, false, {
                                 fileName: "src/components/Banner.js",
-                                lineNumber: 54,
+                                lineNumber: 63,
                                 columnNumber: 19
                             }, undefined)
                         ]
                     }, trendingMovie.id, true, {
                         fileName: "src/components/Banner.js",
-                        lineNumber: 38,
+                        lineNumber: 47,
                         columnNumber: 15
                     }, undefined);
                 })
             }, void 0, false, {
                 fileName: "src/components/Banner.js",
-                lineNumber: 32,
+                lineNumber: 41,
                 columnNumber: 7
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -27318,39 +27332,46 @@ const Banner = ({ trendingMovies , setPage , page  })=>{
                         children: "\xab"
                     }, void 0, false, {
                         fileName: "src/components/Banner.js",
-                        lineNumber: 68,
+                        lineNumber: 77,
                         columnNumber: 9
                     }, undefined),
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("a", {
-                        href: "#",
-                        children: trendingMovies.page
-                    }, void 0, false, {
-                        fileName: "src/components/Banner.js",
-                        lineNumber: 69,
-                        columnNumber: 9
-                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _jsxDevRuntime.Fragment), {
+                        children: pagesArr?.map((page, index)=>{
+                            return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("a", {
+                                href: "#",
+                                children: page
+                            }, index, false, {
+                                fileName: "src/components/Banner.js",
+                                lineNumber: 79,
+                                columnNumber: 18
+                            }, undefined);
+                        })
+                    }, void 0, false),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
-                        onClick: ()=>setPage((page)=>page + 1),
+                        onClick: ()=>{
+                            addPages();
+                            setPage((page)=>page + 1);
+                        },
                         children: "\xbb"
                     }, void 0, false, {
                         fileName: "src/components/Banner.js",
-                        lineNumber: 70,
+                        lineNumber: 81,
                         columnNumber: 9
                     }, undefined)
                 ]
             }, void 0, true, {
                 fileName: "src/components/Banner.js",
-                lineNumber: 67,
+                lineNumber: 76,
                 columnNumber: 7
             }, undefined)
         ]
     }, void 0, true, {
         fileName: "src/components/Banner.js",
-        lineNumber: 30,
+        lineNumber: 39,
         columnNumber: 5
     }, undefined);
 };
-_s(Banner, "SU90UtjpleRvVLRdsG0yPXeEyiY=");
+_s(Banner, "0+4JfmVzU7Ibn8rBLrMA+Teawvg=");
 _c = Banner;
 exports.default = Banner;
 var _c;
