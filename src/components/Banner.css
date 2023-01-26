@@ -12,13 +12,34 @@
 }
 
 .shimmer-card {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 50px;
-  margin: 24px;
-  flex-wrap: wrap;
+  width: 200px;
+  height: 200px;
+  position: relative; 
+  background: #f6f7f8;
+  background-image: linear-gradient(to right, #f6f7f8 0%, #f2f4f7 10%, #f0f0f2 20%, #f2f4f7 30%, #f6f7f8 40%, #f6f7f8 100%);
+  background-repeat: no-repeat;
+  background-size: 800px 200px;
+
+  /* Animation */
+  animation-duration: 1s;
+  
+  /* Specifies style for element when animation isn't playing */
+  animation-fill-mode: forwards;
+  
+  animation-iteration-count: infinite;
+  animation-name: shimmer;
+  animation-timing-function: ease-in-out;
+
   background-color: grey;
+}
+
+@keyframes shimmer-card {
+  0% {
+    background-position: -400px 0;
+  }
+  100% {
+    background-position: 400px 0; 
+  }
 }
 
 img {

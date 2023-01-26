@@ -2,7 +2,7 @@ import "./Banner.css";
 import React, { useEffect, useState } from "react";
 import Shimmer from "./Shimmer.js";
 
-const Banner = ({ trendingMovies, setPage, page }) => {
+const Banner = ({ trendingMovies, setPage, page, handleFavourite }) => {
   const [isFavourite, setIsFavourite] = useState({
     status: false,
     id: "",
@@ -19,27 +19,17 @@ const Banner = ({ trendingMovies, setPage, page }) => {
     });
   };
 
-  /* Displaying all pages instead of one page like << 1 2 3 >> */
-
-  // const addPages = () => {
-  //   setPagesArr(prevPage => [...prevPage, page])
-  // }
-
-  /************************************************************/
-
   const addPages = () => {
     setPagesArr(prevPages => [...prevPages, page+1])
   }
 
-  useEffect(() => {
-    console.log("pagesArr--------->", pagesArr);
-  }, [page])
+  if (!trendingMovies) return <div>No Data Found</div>
 
   return (
     <div>
       <h3 className="banner-head">Trending Movies</h3>
       <div className="movie-list-container">
-        {!trendingMovies ? (
+        {!trendingMovies.results ? (
           <Shimmer />
         ) : (
           trendingMovies.results?.map((trendingMovie, index) => {
@@ -62,7 +52,10 @@ const Banner = ({ trendingMovies, setPage, page }) => {
                 ) : (
                   <button
                     onClick={() =>
-                      handleIsFavourite(trendingMovie.id, trendingMovie)
+                      {
+                        handleIsFavourite(trendingMovie.id, trendingMovie)
+                        handleFavourite(trendingMovie)
+                      }
                     }
                   >
                     Add to Favourite

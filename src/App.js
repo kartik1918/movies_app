@@ -16,7 +16,7 @@ const App = () => {
     setMoviesData(data)
   }
 
-  const handleFavourite = () => {
+  const handleFavourite = (favMovie) => {
     setFavourites(prevFav => [...prevFav, favMovie])
   }
 
@@ -28,7 +28,7 @@ const App = () => {
   return (
     <div>
       <Navbar />
-      <Banner trendingMovies={moviesData} setPage={setCurrPage} page={currPage} />
+      <Banner trendingMovies={moviesData} setPage={setCurrPage} page={currPage} handleFavourite={handleFavourite}/>
     </div>
   )
 }

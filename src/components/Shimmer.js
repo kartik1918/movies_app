@@ -2,13 +2,12 @@ import "./Banner.css"
 import React from 'react'
 
 const Shimmer = () => {
-    console.log("running shimmer");
 
   return (
-    <div>
+    <div className="movie-list-container">
         {Array(10).fill("").map((item, index) => {
             return (
-                <div className='shimmer-card'></div>
+                <div className='shimmer-card' key={index}></div>
             )
         })}
     </div>

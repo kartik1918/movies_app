@@ -18,13 +18,25 @@ html, body {
 }
 
 .shimmer-card {
-  background-color: gray;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  gap: 50px;
-  margin: 24px;
-  display: flex;
+  width: 200px;
+  height: 200px;
+  background: gray linear-gradient(to right, #f6f7f8 0%, #f2f4f7 10%, #f0f0f2 20%, #f2f4f7 30%, #f6f7f8 40% 100%) 0 0 / 800px 200px no-repeat;
+  animation-name: shimmer;
+  animation-duration: 1s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-fill-mode: forwards;
+  position: relative;
+}
+
+@keyframes shimmer-card {
+  0% {
+    background-position: -400px 0;
+  }
+
+  100% {
+    background-position: 400px 0;
+  }
 }
 
 img {
